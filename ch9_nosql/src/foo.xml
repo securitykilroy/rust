@@ -1,0 +1,20 @@
+<person>
+    <name>
+        <first>Ric</first>
+        <middle></middle>
+        <surname>Messier</surname>
+    </name>
+    <address>
+        <street>255 Elm Street</street>
+        <city>Nonwhere</city>
+        <state>UT</state>
+        <zip>90389</zip>
+    </address>
+    <phone>999-998-9987</phone>
+    <dateofbirth>
+        <month>June</month>
+        <day>20</day>
+        <year>1902</year>
+    </dateofbirth>
+    <interests>Rust</interests>
+</person>

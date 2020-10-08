@@ -1,0 +1,8 @@
+[package]
+name = "life"
+version = "0.1.0"
+authors = ["Ric Messier <kilroy@washere.com>"]
+
+[dependencies]
+rand = "0.7.2"
+termion = "*"
