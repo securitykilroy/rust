@@ -1,0 +1,4 @@
+sad	Why are you sad?
+not	Why are you so negative?
+doctor	Do you need to see a doctor?
+nothing	Why are you so negative?
