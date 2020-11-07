@@ -1,5 +1,5 @@
 [package]
-name = "winlogger"
+name = "ch13_winlog"
 version = "0.1.0"
 authors = ["Ric Messier <kilroy@washere.com>"]
 edition = "2018"
