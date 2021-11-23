@@ -28,32 +28,31 @@ impl CheckComplete for Word {
 
 impl CheckLetter for Word {
     fn check_for_letter(&mut self, c: char) -> bool {
+        let mut found = false;
         let mut count: usize = 0;
-        let mut found: bool = false;
+        let mut letter_answer: char;
         let mut response = String::with_capacity(self.length);
-        let mut index = 0;
-        for letter in self.answer.chars() {
-            if letter == c {
-                found = true; 
+
+        for (index, letter) in self.representation.char_indices() {
+            letter_answer = self.answer.chars().nth(index).unwrap();
+            if letter_answer == c {
+                found = true;
+            }
+            response.push(if letter == '_' && letter_answer == c {
                 count += 1;
-                response.push(c);
-            }
-            else {
-                if self.representation.chars().nth(index) != Some('_') {
-                    response.push(self.representation.chars().nth(index).unwrap());
-                }
-                else {
-                response.push('_');
-                }
-            }
-            index += 1;
+                letter_answer
+            } else {
+                letter
+            });
         }
+
         if found {
             println!("Found a ")
         }
         self.representation = response;
         self.correct_count += count;
-        count > 0
+
+        found
     }
 }
 
